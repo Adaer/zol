@@ -1,0 +1,251 @@
+/*
+	登录页面样式
+*/
+$mainWd:1200px;
+$mgAuto: 0 auto;
+$fz:12px 14px 16px 18px 20px 24px 30px;
+$col:#000 #fff #333 #555 #666 #888 #999 #ddd #ccc;
+body{
+	background: #FAFAFA;
+}
+//外层宽度居中
+.wrapper {
+    width: 990px;
+    margin: 0 auto;
+}
+//顶部信息 logo
+.zol-upinfo{
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	.zol-logo{
+		float: left;
+		.logo{
+			float: left;
+			display: block;
+			padding-top: 20px;
+		}
+		a:nth-of-type(2){
+			display: block;
+			float: left;
+			font-size: nth($fz,2);
+			height: 50px;
+    		line-height: 50px;
+			padding-left: 12px;
+			margin-left: 10px;
+			margin-top:25px;
+			border-left: 1px solid #E6E6E6;
+		}
+	}
+	.zol-regtips{
+		float: right;
+		font-size: nth($fz,2);
+		a{
+			padding: 2px 5px;
+			color: #CC0000;
+		}
+		a:hover{
+			color: #fff;
+			background-color: #CC0000;
+		}
+	}
+}
+//登录界面 输入框
+form{
+	margin-top: 30px;
+	border: 1px solid #e6e6e6;
+	overflow: hidden;
+	.login-lt{
+		float: left;
+	}
+	.login-rt{
+		float: right;
+		width: 468px;
+		background-color: #fff;
+		text-align: center;
+		padding-bottom: 8px;
+		.login-box{
+			width: 290px;
+			margin: $mgAuto;
+			h2{
+				color: #333;
+				font-weight: normal;
+				text-align:left;
+				line-height: 27px;
+				padding: 15px 0;
+				span{
+					font-size: nth($fz,1);
+					float: right;
+					cursor:pointer;
+					padding-left: 20px;
+					background: url(../img/reg/shop_login_bg.png) no-repeat -272px -115px;
+				}
+				span:hover{
+					color: #f33;
+					text-decoration: underline;
+				}
+			}
+		/*---登录方式切换-------*/	
+		//普通登录方式
+			.tag1{
+				// display: none;
+				.login-tips{
+					height: 22px;
+					padding-bottom:6px;
+				}
+				input{
+					box-sizing:border-box;
+					width: 100%;
+					height: 40px;
+					padding-left: 6px;
+					margin-bottom: 10px;
+					border:1px solid #e6e6e6;
+				}
+				input:nth-of-type(3){
+					font-weight: bold;
+					color: #fff;
+					border-radius:6px;
+					background-color: #DE3030;
+					cursor:pointer;
+				}
+				input:nth-of-type(3):hover{
+					transition:0.5s;
+					background-color: #C61E1E;
+				}
+				p{
+					text-align: right;
+					padding-bottom: 12px;
+					a{
+						color: #134BA0;
+						margin-top: -2px;
+					}
+				}
+			
+			}
+		//手机动态码验证登录	
+			.tag2{
+				display: none;
+				.login-tips{
+					height: 22px;
+					padding-bottom:6px;
+				}
+				input{
+					box-sizing:border-box;
+					width: 100%;
+					height: 40px;
+					padding-left: 6px;
+					margin-bottom: 10px;
+					border:1px solid #e6e6e6;
+				}
+				.login-authCode{
+					input{
+						width: 62%;
+						float: left;
+					}
+					#v_container{
+						float: right;
+					}
+					.msgBtn{
+						width: 110px;
+						padding: 0;
+						float: left;
+						background-color: #F2F2F2;
+						cursor:pointer;
+					}
+				}
+				.send-btn{
+					input{
+						font-weight: bold;
+						color: #fff;
+						border-radius:6px;
+						background-color: #DE3030;
+						cursor:pointer;
+					}
+					input:hover{
+						transition:0.5s;
+						background-color: #C61E1E;
+					}					
+				}								
+			}
+		/*---合作方图标-------*/	
+			.teams{
+				width: 100%;
+				padding-top: 18px;
+				border-bottom:1px solid #e6e6e6;
+				float: left;
+				position:relative;
+				margin-bottom: 12px;
+				i{
+					color: #666;
+					background-color: #fff;
+					position:absolute;
+					top: 8px;
+    				left: 38%;
+				}
+			}				
+			.teams-ico{
+				width: 290px;
+				float: right;
+				a{
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					background: url(../img/reg/bg.png) no-repeat 1px -81px;
+				}
+				a:nth-child(1){
+					background: url(../img/reg/bgs2.png) no-repeat 1px 2px;
+				}
+				a:nth-child(1):hover{
+					background-position: 1px -36px;
+				}
+				a:nth-child(2){
+					background-position: 1px -81px;
+				}
+				a:nth-child(2):hover{
+					background-position: 1px -120px;
+				}				
+				a:nth-child(3){
+					background-position: -38px -81px;
+				}
+				a:nth-child(3):hover{
+					background-position: -38px -120px;
+				}
+				a:nth-child(4){
+					background-position: -77px -81px;
+				}
+				a:nth-child(4):hover{
+					background-position: -77px -120px;
+				}
+				a:nth-child(5){
+					background-position: -116px -81px;
+				}	
+				a:nth-child(5):hover{
+					background-position: -116px -120px;
+				}														
+			}
+		}
+	}
+}
+/* 页脚信息 */
+footer{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+    margin: 300px 0 0;
+    border-top: 1px solid #dcdcdc;
+    p{
+    	width: 990px;
+    	margin: $mgAuto;
+    	a{
+    		padding: 0 6px;
+    	}
+    	a:hover{
+    		color: #f33;
+    		text-decoration: underline;
+    	}
+    	span{
+    		color: #666;
+    		float: right;
+    	}
+    }
+}

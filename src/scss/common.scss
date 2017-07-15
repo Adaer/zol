@@ -1,0 +1,69 @@
+/* CSS Document */
+.fl{float: left;}
+.fr{float: right;}
+.ov{overflow:hidden;}
+
+//万能清除法
+.clear{
+	content:'';
+	clear:both;
+	height:0;
+	overflow:hidden;
+	display: block;
+	visibility:hidden;
+	zoom:1;
+}
+//用于导航菜单JS特效 li背景色
+.zol-menu-bgc{
+	background-color: #FFF;
+	color: #B1191A;
+}
+//外层盒子宽度和居中
+.zol-wrapperbox {
+    width: 1200px;
+    margin: 0 auto;
+}
+//城市列表选择时样式
+.select-ctactive{
+	background-color: #F5F5F5;
+	color:#c60000;
+}
+//当前城市样式
+.this-city{
+	background-color: #c60000;
+	color:#fff;	
+}
+//列表页 hover li
+.shop-list-hover{
+	box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+    -webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+}
+//登录表单验证 输入框选中样式
+/*--权重问题 可以加父元素!!!!--*/
+form .login-rt .login-box .tag1 .reg-input-sty{
+	border:1px solid #CC0000;
+}
+form .login-rt .login-box .tag2 .reg-input-sty{
+	border:1px solid #CC0000;
+}
+//热门商品 轮播图 tag切换
+.guide-line{
+	border-bottom: 4px solid #fff;
+}
+//注册表单验证 输入框选中样式
+.reg-info .tb-form .reg-input-sty{
+	border:1px solid #CC0000;
+}
+//遮罩层 登录样式
+.toolbar-login .tool-login-inf .reg-input-sty{
+	border:1px solid #CC0000;
+}
+//列表页 翻页按钮
+#pages .page-sty{
+	color: #fff;
+	border:1px solid #CC0000;
+	background-color: #CC0000	
+}
+
+
+/*全局公共样式*/

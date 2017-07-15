@@ -1,0 +1,1615 @@
+/* 
+	主页scss to css
+ */
+$mainWd:1200px;
+$mgAuto: 0 auto;
+$fz:12px 14px 16px 18px 20px 24px 30px;
+$col:#000 #fff #333 #555 #666 #888 #999 #ddd #ccc;
+ /* 吸顶条top */
+.zol-topbar{
+	height: 29px;
+	background-color: #f5f5f5;
+	border-bottom:1px solid #e6e6e6;
+	position:relative;
+	z-index: 998;
+	.wrapper{
+		width:$mainWd;
+		margin:$mgAuto;
+		.zol-login-info{
+			float: left;
+			line-height: 29px;
+			.zol-backhome{
+				padding-right: 20px;
+			}
+			.zol-login{
+				padding-right: 20px;
+				a{color: #f60;}
+			}
+			.zol-register a{color: #f60;}
+		}
+		.zol-topmenu{
+			margin-right: 15px;
+			float: right;
+			li{
+				color: #888;
+				float: left;
+				line-height: 29px;
+				padding: 0 12px;
+				a:hover{
+					color: #c00;
+					text-decoration:underline;
+				}
+				.zol-topmenu-nohover:hover{
+					color: #666;
+					text-decoration:none;
+				}
+				.zol-topmenu-ico{
+	    			position:absolute;
+	    			top:8px;
+    				width: 14px;
+   					height: 14px;
+    				background: url(../img/topbar_ico.png) no-repeat 4px -40px;
+				}
+				.zol-topmenu-phone{
+					display: inline-block;
+					width: 60px;
+					text-align: right;
+					background: url(../img/topbar_ico.png) no-repeat -10px 0;
+				}
+			}
+			li:hover .zol-topmenu-ico{
+					transition:0.3s linear;
+					transform:rotate(180deg);
+					-webkit-transform:rotate(180deg);
+				}
+		}
+	}
+}
+.zol-changetel{
+	width: $mainWd;
+	margin: 10px auto;
+	text-align: center;
+	a:hover{
+		color: #f60;
+	}
+}
+/* ----------顶部信息---用户导航↑↑↑↑↑-------------------------- */
+/* ----------顶部logo---搜索↓↓↓↓-------------------------- */
+.zol-head{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	width: $mainWd;
+	height: 100px;
+	margin: $mgAuto;
+	.zol-hdlogo{
+		a:nth-child(1){
+			float: left;
+			display: block;
+			padding-right: 10px;
+			border-right:1px solid #eee;
+		}
+		div:nth-child(2){
+			float: right;
+			padding-left: 10px;
+			position:relative;
+			h2{
+				position:relative;
+				z-index:1002;
+				width: 68px;
+				font-weight: normal;
+				color: #333;
+				padding-left: 8px;
+				background: #fff;
+				cursor:pointer;
+				em{
+					position:absolute;
+					left: 52px;
+					display:inline-block;
+					width: 16px;
+					height: 16px;
+					background:url(../img/city-icon.png) no-repeat 4px 10px;
+				}
+			}
+			#zol-citymap{
+				width: 140px;
+				min-height:60px;
+				position:absolute;
+				z-index:1001;
+				top:27px;
+				background: #fff;
+				display: none;
+				li{
+					margin: 4px 5px;
+					height: 16px;
+					line-height: 16px;
+					float: left;
+					a{
+						display: block;
+						width: 24px;
+						padding: 6px 6px;
+						border-right:none;
+					}				
+				}
+
+			}
+		}
+	}
+/*---搜索框---*/	
+	.zol-search{
+		.zol-sch-box{
+			overflow:hidden;
+			:nth-child(1){
+				width: 427px;
+				height: 20px;
+				padding: 5px 10px;
+				font-size: nth($fz,3);
+				color: #CCCCCC;
+				border:2px solid #C40000;
+			}		
+			:nth-child(2){
+				width: 80px;
+				height: 34px;
+				font-size: nth($fz,3);
+				background:#C40000;
+				color: #fff;
+				cursor:pointer;
+			}
+		}
+/*---搜索热词---*/	
+		.zol-hotkey::before{
+				content:'';
+				clear:both;
+				overflow:hidden;
+				height:0;
+			}		
+		.zol-hotkey{
+			padding-top:10px;
+			a{
+				color: #999;
+				margin: 0 5px;
+			}
+			a:hover{
+				color: #c60;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+/*---大导航类---*/	
+.zol-nav-wrapper{
+	$lh:42px;
+	width: $mainWd;
+	height: 40px;
+	margin: $mgAuto;
+	border-bottom:2px solid #B1191A;
+	position:relative;
+	z-index: 1000;
+	.zol-goods-box,.zol-nav-main,.zol-nav-adv{
+		position:absolute;
+	}
+	//左侧商品导航目录
+	.zol-goods-box{
+		width: 200px;
+		top:0;
+		left:0;
+		color:nth($col,2);
+		background:#B1191A;
+		h2{
+			height: $lh;
+			line-height: $lh;
+			text-align: center;
+			font-size: nth($fz,3);
+			font-weight: normal;
+			background: #CE1A1B;
+		}
+		.zol-nav{
+			border-left:1px solid #B1191A;
+			li{
+				height: 64px;
+				padding-left: 36px;
+				border-bottom:1px solid #BD3B3C;
+				position:relative;
+				div{
+					font-size: nth($fz,2);
+				}
+				// div:nth-of-type(1)::after{
+				// 	content:"";
+				// 	clear:both;
+				// 	display:block;
+				// 	height:0;
+				// 	overflow:hidden;
+				// 	visibility:hidden;
+				// 	zoom:1;
+				// }
+				div:nth-of-type(1){
+					height: 30px;
+					line-height: 30px;	
+					background:url(../img/nav/item.png) no-repeat 144px 11px;
+					span{
+						display: inline-block;
+						width: 16px;
+						height: 16px;
+						background:url(../img/nav/classify-icon.png) no-repeat;
+						position:absolute;
+						left:12px;
+						top:7px;
+					}
+
+				}
+				div:nth-of-type(2){
+					padding-top:4px;
+					a{
+						font-size: nth($fz,1);
+						color: #fff;
+						padding-right: 5px;
+					}
+					a:hover{
+						transition:0.2s linear;
+						color: #B1191A;
+						text-decoration:underline;
+					}					
+				}
+				//导航所有a：hover效果
+ 			}
+			//调整导航图标
+			li:nth-of-type(2) div:nth-of-type(1) span{
+				background-position:0 -16px;
+			}
+			li:nth-of-type(3) div:nth-of-type(1) span{
+				background-position:0 -32px;
+			}
+			li:nth-of-type(4) div:nth-of-type(1) span{
+				background-position:0 -51px;
+			}
+			li:nth-of-type(5) div:nth-of-type(1) span{
+				background-position:0 -67px;
+			}
+			li:nth-of-type(6) div:nth-of-type(1) span{
+				background-position:0 -85px;
+			}
+			// 导航菜单hover效果--------------------
+			li:hover{background-color: #fff;}
+			li:hover div:nth-of-type(1){color: #B1191A;}
+			li:hover div:nth-of-type(2) a{
+						transition:0.2s linear;
+						color: #B1191A;
+					}
+			//最后一个空白li禁止hover
+			li:last-child{background-color: #B1191A;}	
+			//定位导航菜单内容
+			.nav-menu-conbox{
+				width: 1000px;
+				background: #fff;
+				box-sizing:border-box;
+				border-right:1px solid #C50505;
+				border-bottom:1px solid #C50505;
+				position:absolute;
+				left:200px;top:0;
+				display: none;
+				z-index:101;//层级要大于轮播图 覆盖
+				.nav-menu-content{
+					background:#fff;
+					width: 720px;
+					min-height:442px;
+					padding-left:30px;
+					padding-top:12px;
+					position:relative;
+					//服务保障内容
+					.nav-menu-ico{
+						dt,dd{float: left;line-height: 24px;}
+						dt{font-weight: bold;}
+						//zol服务保障图标
+						dd{
+							padding-left: 46px;
+							background:url(../img/nav/service.png) no-repeat 20px 0;
+							a:hover{text-decoration:underline;}
+						}
+						dd:nth-of-type(2){background-position:20px -24px;}
+						dd:nth-of-type(3){background-position:20px -47px;}
+						dd:nth-of-type(4){background-position:20px -71px;}
+						dd:nth-of-type(5){background-position:20px -95px;}
+						dd:nth-of-type(6){background-position:20px -119px;}
+						a{
+							font-size: nth($fz,2);
+							color: #00AE75;
+						}
+					}
+					//商品子类
+					.nav-menu-subclass{
+						line-height: 24px;
+						dt{
+							float: left;
+							min-width: 60px;
+							font-weight: bold;
+							color: #333;
+							padding-right: 24px;
+							padding-bottom: 8px;
+							background:url(../img/nav/type-arrow.png) no-repeat 76px 8px;
+							a:hover{
+								transition:0.2s linear;
+								color: #B1191A;
+							}
+						}
+						dd{
+							margin:10px 0 10px 90px;
+							padding-bottom: 8px;
+							border-bottom:1px solid #eee;
+							a{
+								padding: 0 10px;
+								border-right:1px solid #eee;
+							}
+							a:hover{
+								transition:0.2s linear;
+								color: #B1191A;
+								text-decoration:underline;
+							}
+						}
+					}
+					//品牌logo展示
+					.nav-menu-logo{
+						position:absolute;
+						bottom:4px;
+						right:4px;
+						li{
+							box-sizing:border-box;
+							width: 118px;
+							height: 60px;
+							padding-left:0;
+							border-bottom:0 none;
+							margin: 1px;
+							float: left;
+							a{
+								width: 118px;
+								height: 60px;
+								display: block;
+								border:1px solid #fff;
+
+							}
+						}
+						a:hover{
+							transition:0.3s linear;
+							border:1px solid #eee;
+						}
+					}
+				}
+			}
+			//让人崩溃的margin-top！！！！
+			//由于父级定位给在li上，要调整conbox导航菜单内容相对当前li的定位
+			li:nth-of-type(2) .nav-menu-conbox{top:-65px;}
+			li:nth-of-type(3) .nav-menu-conbox{top:-130px;}
+			li:nth-of-type(4) .nav-menu-conbox{top:-195px;}
+			li:nth-of-type(5) .nav-menu-conbox{top:-260px;}
+			li:nth-of-type(6) .nav-menu-conbox{top:-325px;}
+		}
+	}
+	//中部模块导航
+	.zol-nav-main{
+		left:208px;
+		li{
+			float: left;
+			a{
+				font-size: nth($fz,3);
+				line-height: $lh;
+				color: #333;
+				padding: 0 15px;
+			}
+			a:hover{
+				transition:0.2s linear;
+				color: #FF5353;
+			}
+		}
+	}
+	//导航菜单 右侧广告
+	.zol-nav-adv{
+		line-height: $lh;
+		right:0;
+		a{
+			font-size: nth($fz,3);
+			color: #FF5353;
+		}
+		a:hover{
+			transition:0.3s linear;
+			color: #C40000;
+		}
+	}
+	//更换导航菜单第一个背景图
+	.zol-nav{
+		li:nth-of-type(1):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -18px 0;
+		}		
+		li:nth-of-type(2):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -17px -16px;
+		}
+		li:nth-of-type(3):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -17px -32px;
+		}
+		li:nth-of-type(4):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -18px -51px;
+		}
+		li:nth-of-type(5):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -18px -67px;
+		}
+		li:nth-of-type(6):hover div:nth-of-type(1) span{
+			background:url(../img/nav/classify-icon.png) no-repeat -17px -85px;
+		}
+	}
+}
+/* 中部焦点内容 轮播图 注意定位时 层级关系z-index带来的问题*/
+	.zol-focusinfo{
+		.zol-carousel-shell{
+			box-sizing:border-box;
+			height: 453px;
+			padding-left:210px;
+			padding-top: 10px;
+			position:relative;
+			/*-------焦点轮播图---------*/
+			.zol-carousel-lt{
+				position:relative;
+				z-index:10;
+				width: 740px;
+   				height: 290px;
+  				overflow: hidden;
+  				margin: 0;
+				ul{
+					position: absolute;
+    				top: 0;
+    				li{
+    					float: left;
+
+    					img{width: 100%;}
+    				}
+				}
+				.page,.prev,.next{
+					cursor:pointer;
+				}
+				.prev{
+					background:url(../img/banner/focus-arrow.png) no-repeat 0 0;
+				}		
+				.next{
+					background:url(../img/banner/focus-arrow.png) no-repeat 0 -74px;
+				}
+				.prev:hover{
+					background-position:-40px 0;
+				}
+				.next:hover{
+					background-position:-40px -74px;
+				}
+			}
+			/*轮播图下方图片展示*/
+			.zol-carousel-under{
+				width: 740px;
+				ul{
+					display: flex;
+					li{
+						width: 100%;
+						height: 149px;
+						border-left: 1px solid #E6E6E6;
+						border-bottom: 1px solid #E6E6E6;
+						padding-left: 10px;
+						background: #fff;
+						position:relative;
+						a:nth-child(1){
+							color: #333;
+							line-height: nth($fz,7);
+							font-size: nth($fz,3);
+						}
+						p{
+							color: #D33F3F;
+							font-size: nth($fz,2);
+						}
+						a:last-child{
+							display: block;
+							position:absolute;
+							bottom:1px;
+							right:1px;
+							transition: 0.5s all ease;
+    						-webkit-transition: 0.5s all ease;
+						}
+					}
+					li:last-child{
+						border-right: 1px solid #E6E6E6;
+					}
+				}
+			}
+			/*轮播图右侧展示*/ 
+			.zol-carousel-rt{
+				width: 240px;
+			    position: absolute;
+			    right: 0;
+			    top: 10px;
+			    // z-index: 100;
+				a{
+					display: block;
+				}
+				a:last-child{padding-top: 2px;}
+			}
+		}
+	}
+/* ----首页主体内容区-------------------- */
+/* ----侧边栏 购物信息 足迹 优惠券等-------------------- */
+	aside{
+		$toolbarWt:46px;
+		position:fixed;
+		right:-8px;
+		top:0;
+		height: 100%;
+		width: $toolbarWt;
+		background: #333;
+		z-index: 2000;
+		.zol-toolbar{
+			height: 100%;
+			width: $toolbarWt;
+			position:absolute;
+			top:0;
+			right:0;
+			.toolbar-top{
+				position:absolute;
+				top:5%;
+				left:0;
+				div{margin:10px 0;}
+				.toolbar-myindent{
+					width: $toolbarWt;
+					height: 30px;
+					margin-bottom: 5px;
+					cursor:pointer;
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -6px;
+					span{
+						display: block;
+						width: 50px;
+						height: 30px;
+						line-height: 30px;
+						color: #fff;
+						padding: 0 5px;
+						background-color: #f33;
+						position:absolute;
+						z-index: -110;
+						left:0;
+						display: none;
+					}					
+				}
+				.toolbar-myindent:hover{
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -6px #f33;
+				}
+				.toolbar-footprint{
+					width: $toolbarWt;
+					height: 30px;
+					margin-bottom: 5px;
+					cursor:pointer;
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -82px;
+					span{
+						display: block;
+						width: 50px;
+						height: 30px;
+						line-height: 30px;
+						color: #fff;
+						padding: 0 5px;
+						background-color: #f33;
+						position:absolute;
+						z-index: -110;
+						left:0;
+						display: none;
+					}
+				}
+				.toolbar-footprint:hover{
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -82px #f33;
+				}					
+				.toolbar-cart{
+					width: $toolbarWt;
+					height: 30px;
+					margin-bottom: 5px;
+					cursor:pointer;
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -115px;
+					span{
+						display: block;
+						width: 50px;
+						height: 30px;
+						line-height: 30px;
+						color: #fff;
+						padding: 0 5px;
+						background-color: #f33;
+						position:absolute;
+						z-index: -110;
+						left:0;
+						display: none;
+					}
+					i{
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						line-height: 15px;
+						text-align: center;
+						border-radius:50%;
+						color: #fff;
+						background: #f33;
+						position:absolute;
+						top:84px;
+						right:14px;
+					}
+				}
+				.toolbar-cart:hover{
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -115px #f33;
+				}				
+				.toolbar-coupon{
+					width: $toolbarWt;
+					height: 30px;
+					cursor:pointer;
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -695px;
+					span{
+						display: block;
+						width: 50px;
+						height: 30px;
+						line-height: 30px;
+						color: #fff;
+						padding: 0 5px;
+						background-color: #f33;
+						position:absolute;
+						z-index: -110;
+						left:0;
+						display: none;
+					}
+				}
+				.toolbar-coupon:hover{
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -695px #f33;
+				}
+			}
+			.toolbar-under{
+				position:absolute;
+				bottom:1%;
+				left:0;
+				.toolbar-advice{
+					a{
+						display: block;
+						width: 34px;
+						height: 40px;
+						text-align: center;
+						color: #fff;
+						font-weight: bold;
+					}
+				}	
+				.toolbar-backtop{
+					width: $toolbarWt;
+					height: 40px;
+					cursor:pointer;
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -183px;
+					a{
+						display: block;
+						height: 40px;
+					}
+				}
+				.toolbar-backtop:hover{
+					background:url(../img/index/aside_right/bar_ico.png) no-repeat 0 -183px #f33;
+				}		
+			}
+		}
+	/* 登录遮罩层！！！ */	
+	#layer_show{
+		display: none;
+	}
+		.zol-layerbox{
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity:0.6;
+			filter:alpha(opacity=60);
+			-moz-opacity: 0.6;
+			position: fixed;
+			top:0;left:0;
+		}
+		.toolbar-login{
+			width: 320px;
+			height: 360px;
+			background-color: #fff;
+			position:fixed;
+		    left: 0;
+		    top: 0;   
+		    bottom: 0;
+		    right: 0;
+		    margin: auto;	
+		    input{
+		    	float: none;
+		    	border:1px solid #e6e6e6;
+		    	width: 290px;
+		    	height: 36px;
+		    	margin: 10px 0;
+		    	padding-left: 5px;
+		    }
+		    .tool-login-top{
+		    	height: 40px;
+		    	line-height: 40px;
+		    	padding-left: 16px;
+		    	background-color: #FAFAFA;
+		    	h4{
+		    		font-size: nth($fz,3);
+		    		font-weight: normal;
+		    		color: #666;
+		    		.close-layer{
+		    			float: right;
+		    			display: inline-block;
+		    			width: 22px;
+		    			height: 22px;
+		    			line-height: 15px;
+		    			margin: 9px 5px;
+		    			text-align: center;
+		    			cursor:pointer;
+						background: url(../img/reg/bg.png) no-repeat -181px -81px;
+		    		}
+		    		.close-layer:hover{
+		    			background-position: -156px -81px;
+		    		}
+		    	}
+		    }
+		    //遮罩层 表单登录区
+		    .tool-login-inf{
+		    	text-align: center;
+		    	.tool-infhd{
+		    		font-size: nth($fz,2);
+		    		text-align: left;
+		    		padding-left: 14px;
+		    		padding-top: 10px;
+		    	}
+		    	form{
+		    		p:nth-of-type(3){
+		    			text-align: left;
+		    			padding-left: 14px;
+		    			line-height: 33px;
+		    			input{
+		    				width: 13px;
+		    				height: 13px;
+		    				margin-right: 4px;
+		    			}
+		    			a{
+		    				float: right;
+		    				padding-right: 14px;
+		    				color: blue;
+		    			}
+		    			a:hover{
+		    				color: #f33;
+		    				text-decoration: underline;
+		    			}
+		    		}
+		    		p:nth-of-type(4){
+						input{
+							font-size: nth($fz,3);
+							color: #fff;
+							background-color: #DC2F2F;
+							border-radius:6px;
+						}
+						input:hover{
+							background-color: #f33;
+						}
+		    		}
+		    		p:nth-of-type(5){
+		    			text-align: right;;
+		    			a{
+		    				padding-right: 14px;
+		    				color: blue;
+		    			}
+		    			a:hover{
+		    				color: #f33;
+		    				text-decoration: underline;
+		    			}
+		    		}
+		    	}
+		    	//第三方登录
+		    	.tool-login-team{
+					height: 60px;
+					padding-top: 10px;
+					span{
+						float: left;
+    					padding-top: 5px;	
+    					padding-left: 12px;	
+					}
+					a{
+						display: inline-block;
+						width: 38px;
+						height: 40px;
+						margin: 0 5px;
+						background: url(../img/reg/bg.png) no-repeat 0 -81px;
+					}
+					a:nth-of-type(1):hover{
+						background-position: 0 -121px;
+					}
+					a:nth-of-type(2){
+						background-position: -40px -81px;
+					}
+					a:nth-of-type(2):hover{
+						background-position: -39px -121px;
+					}					
+					a:nth-of-type(3){
+						background-position: -79px -81px;
+					}
+					a:nth-of-type(3):hover{
+						background-position: -78px -121px;
+					}					
+					a:nth-of-type(4){
+						background-position: -117px -81px;
+					}
+					a:nth-of-type(4):hover{
+						background-position: -117px -121px;
+					}															
+		    	}
+		    }		
+		}
+	}
+section{
+	width:$mainWd;
+	margin:$mgAuto;
+	padding-top: 20px;
+/* ----全国团购-------------------- */
+	.zol-tgou-info{
+		height: 44px;
+		line-height: 44px;
+		h2{
+			font-size: nth($fz,6);
+			font-weight: normal;
+			padding-left:15px;
+			float: left;
+			background: url(../img/index/tg/module-title.png) no-repeat left center;
+		}
+		p{
+			min-width: 120px;
+			float: right;
+			a{
+				color: #666;
+				padding: 0 16px;
+			}
+			a:hover{color: #C40000;text-decoration:underline;}
+		}
+	}
+	// 抢购倒计时
+	.zol-tgou-img{
+		display: flex;
+		justify-content:space-around;
+		border-top:1px solid #e6e6e6;
+		border-left:1px solid #e6e6e6;
+		div{
+			border-bottom:3px solid #ffffff;
+			box-sizing:border-box;
+			img{
+				width: 298px;
+				height: 180px;
+				border-right:1px solid #e6e6e6;
+			}
+			//js生成后的效果
+			div{
+				width: 100%;
+				height: 32px;
+				line-height: 32px;
+				border-right:1px solid #e6e6e6;
+				border-bottom:1px solid #e6e6e6;
+				text-align: center;
+				b{
+					color: #f33;
+					font-weight: bold;
+					font-size: nth($fz,4);
+				}
+			}
+		}
+		div:hover{border-bottom-color:#c60000;}		
+	}
+/* ----1F手机类--官网已经改版------------------ */
+	// .zol-goodslist{
+	// 	padding-top: 20px;
+	// 	padding-bottom: 5px;
+	// 	.goods-cont{
+	// 		position:relative;
+	// 	}
+	// 	.goods-cont-lt{
+	// 		h2{
+	// 		font-size: nth($fz,6);
+	// 		font-weight: normal;
+	// 		padding-left:15px;
+	// 		background: url(../img/index/tg/module-title.png) no-repeat left center;				
+	// 		}
+	// 	}
+	// 	//tag切换右侧内容
+	// 	.goods-cont-rt{
+	// 		position:absolute;
+	// 		top:0;
+	// 		left:360px;
+	// 		// border:1px solid #f60;
+	// 		#zol-tagchange{
+	// 			border-top:1px solid #e6e6e6;
+	// 			border-left:1px solid #e6e6e6;
+	// 			height: 36px;
+	// 			li{
+	// 				float: left;
+	// 				width: 120px;
+	// 				height: 36px;
+	// 				font-size: nth($fz,3);
+	// 				line-height: 36px;
+	// 				text-align: center;
+	// 				border-right:1px solid #e6e6e6;
+	// 				border-bottom:1px solid #e6e6e6;
+	// 			}
+	// 		}
+	// 	}
+	// //商品图标列表	
+	// 	.googds-img{
+	// 		width: 1206px;
+	// 		height: 64px;
+	// 		overflow: hidden;
+	// 		padding-top: 5px;
+	// 		li{
+	// 			float: left;
+	// 			border:1px solid #fff;
+	// 		}
+	// 		li:hover{border:1px solid #e6e6e6;}
+	// 	}
+	// }
+/* --优惠券领取-- */
+	.zol-couponCneter{
+		padding-top: 40px;
+		ul{
+			margin-top: 20px;
+			padding-bottom: 30px;
+			overflow: hidden;
+			li{
+				float: left;
+				width: 230px;
+				height:100px;
+				border:1px solid #e6e6e6;
+				box-shadow:1px 1px 10px #e6e6e6;
+				margin-right: 15px;
+				position:relative;
+				//优惠券面额 店铺信息
+				.coup-price{
+					overflow: hidden;
+					span{
+						font-size: nth($fz,7);
+						font-weight: bold;
+						font-style: italic;
+						color: #FF6666;
+						float: left;
+					}
+					div{
+						float: right;
+						color: #FF6666;
+						padding: 5px 5px 0 30px;
+						h4{font-size: nth($fz,2);}
+						p{color: #888;}
+					}
+				}
+				//前往领取
+				.get-coup{
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					margin: 20px 8px 0 8px;
+					border-top:1px solid #e6e6e6;
+					a{
+						color: #FF6666;
+					}
+					a:hover{text-decoration:underline;}
+					i{
+						display:inline-block;
+						width: 16px;
+						height: 100px;
+						background: url(../img/index/zol-home-icos.png) no-repeat -69px 0;
+						position:absolute;
+						right:-16px;
+						top:0;						
+					}
+				}
+			}
+			li:nth-of-type(1){
+				width: 156px;
+				padding-left: 16px;
+				background: #EC3639;
+				color: #fff;
+				h2{
+					font-size: nth($fz,6);
+					font-weight: normal;
+					padding-top: 6px;
+				}
+				p{
+					font-size: nth($fz,2);
+					color: #e6e6e6;
+				}
+				a{
+					color: #fff;
+					font-size: nth($fz,2);
+					line-height: 30px;
+				}
+				a:hover{text-decoration: underline;}
+				i{
+					display:inline-block;
+					width: 16px;
+					height: 100px;
+					background: url(../img/index/zol-home-icos.png) no-repeat -91px 0;
+					position:absolute;
+					right:-16px;
+					top:0;
+				}
+			}
+		}
+	}
+/*-----品牌精选--*/	
+	.zol-brands{
+		h2{
+			font-size: nth($fz,5);
+			padding-left: 40px;
+			padding-bottom: 10px;
+			background:url(../img/index/zol-home-icos.png) no-repeat -132px -128px;
+			span{
+				font-size: nth($fz,2);
+				font-weight: normal;
+				color: #888;
+				padding-left: 10px;
+			}
+		}
+	}
+	// 精选商品列表样式
+	.brands-list{
+		ul{
+			display: flex;
+			justify-content:space-around;
+			li{
+				width: 230px;
+				height: 340px;
+				border:1px solid #e6e6e6;
+				text-align: center;
+				a:nth-child(1){
+					display: block;
+					padding: 24px 0 14px 14px;
+				}
+				a:nth-child(2){
+					color: #333;
+					line-height: nth($fz,7);
+					font-size: nth($fz,3);
+				}
+				a:nth-child(2):hover{color: #f33;text-decoration: underline;}
+				p{
+					color: #f33;
+					font-size: nth($fz,2);
+				}
+				p::before{
+					content:"RMB ";
+					color: #333;
+				}
+			}
+			li:nth-of-type(1){
+				a:nth-child(1){
+					padding: 0;
+				}
+				p::before{
+					content:"";
+					color: #333;
+				}				
+			}	
+			li:hover{
+				box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+    			-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+			}	
+		}
+
+	}
+}
+/* 电竞 热门商品列表 */ 
+	.zol-games{
+		padding-top: 30px;
+		h2{
+			font-size: nth($fz,5);
+			padding-left: 40px;
+			padding-bottom: 10px;
+			background:url(../img/index/zol-home-icos.png) no-repeat -132px -171px;
+			span{
+				font-size: nth($fz,2);
+				font-weight: normal;
+				color: #888;
+				padding-left: 10px;
+			}
+			a{
+				font-size: nth($fz,2);
+				font-weight: normal;
+				float: right;
+				padding-right: 24px;
+				background:url(../img/index/zol-home-icos.png) no-repeat -122px -285px;
+			}
+			a:hover{
+				color: #f33;
+				background-position: -122px -317px;
+			}
+		}
+		.zol-gamebox{
+			display: flex;
+			justify-content: space-around;
+			.zol-gamebox-lt{
+				width: 594px;
+				position:relative;
+				box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+    			-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;				
+				.gmlt-top{
+					h4{
+						font-size: nth($fz,4);
+						color: #fff;
+						height: 48px;
+						line-height: 48px;
+						padding-left: 12px;
+						background-color: #7095EE;
+						box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+    					-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	
+					}
+					.gm-guide{
+						position:absolute;
+						top:14px;right:0;
+						font-size: nth($fz,2);
+						li{
+							color: #fff;
+							margin: 0 16px;
+							float: left;
+							cursor:pointer;
+						}
+					}
+				}
+				//tag1轮播图	
+				.gm-cont1{
+					position:relative;
+					z-index:10;
+					width: 740px;
+	   				height: 290px;
+	  				overflow: hidden;
+	  				margin: 0;
+					ul{
+						position: absolute;
+	    				top: 0;
+	    				li{
+	    					float: left;
+	    					img{width: 100%;}
+	    				}
+					}
+					.page{
+						right:50%;
+						bottom:0;
+						span{
+							width: 10px;
+							height: 10px;
+						}
+					}
+				}
+				.gm-cont2{
+					position:relative;
+					z-index:10;
+					width: 740px;
+	   				height: 290px;
+	  				overflow: hidden;
+	  				margin: 0;
+					ul{
+						position: absolute;
+	    				top: 0;
+	    				li{
+	    					float: left;
+	    					img{width: 100%;}
+	    				}
+					}
+					.page{
+						right:50%;
+						bottom:0;
+						span{
+							width: 10px;
+							height: 10px;
+						}
+					}
+				}
+				.gm-cont3{
+					position:relative;
+					z-index:10;
+					width: 740px;
+	   				height: 290px;
+	  				overflow: hidden;
+	  				margin: 0;
+					ul{
+						position: absolute;
+	    				top: 0;
+	    				li{
+	    					float: left;
+	    					img{width: 100%;}
+	    				}
+					}
+					.page{
+						right:50%;
+						bottom:0;
+						span{
+							width: 10px;
+							height: 10px;
+						}
+					}
+				}
+				.gmlt-under{
+					padding-top: 20px;
+					ul{
+						display: flex;
+						justify-content: space-between;
+					}
+					li{
+						width: 196px;
+						float: left;
+						margin-left: 12px;
+						.title-inf{
+							display: block;
+							width: 170px;
+							padding-top: 16px;
+							font-size: nth($fz,2);
+							color: #333;
+							overflow: hidden;
+    						text-overflow: ellipsis;
+    						white-space: nowrap;
+						}
+						.title-inf:hover{
+							color: #f33;
+							text-decoration: underline;
+						}
+						a{
+							img{
+								width: 160px;
+								height: 160px;
+							}							
+						}
+						p{
+							font-size: nth($fz,2);
+							font-weight: bold;
+							color: #f33;
+							padding: 8px 0px;	
+						}
+					}
+				}								
+			}
+/* -------------------------------- */
+			.zol-gamebox-rt{
+				width: 594px;
+    			margin-left: 12px;
+				box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+				-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	    			
+    			.gmrt-top{
+				h4{
+					font-size: nth($fz,4);
+					color: #fff;
+					height: 48px;
+					line-height: 48px;
+					padding-left: 12px;
+					background-color: #9B74E9;
+					box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+					-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	
+					}
+    			}
+    			.gmrt-list{
+					padding-top: 20px;
+					li{
+						width: 185px;
+						float: left;
+						margin-left: 12px;
+						.title-inf{
+							display: block;
+							width: 170px;
+							padding-top: 16px;
+							font-size: nth($fz,2);
+							color: #333;
+							overflow: hidden;
+    						text-overflow: ellipsis;
+    						white-space: nowrap;
+						}
+						.title-inf:hover{
+							color: #f33;
+							text-decoration: underline;
+						}
+						a{
+							img{
+								width: 160px;
+								height: 160px;
+							}							
+						}
+						p{
+							font-size: nth($fz,2);
+							font-weight: bold;
+							color: #f33;
+							padding: 8px 0px;	
+						}
+					}    				
+    			}
+    		}
+		}	
+	}
+/* 3C数码集市 */
+	.zol-digital{
+		padding-top: 30px;
+		h2{
+			font-size: nth($fz,5);
+			padding-left: 40px;
+			padding-bottom: 10px;
+			background:url(../img/index/zol-home-icos.png) no-repeat -132px -211px;
+			span{
+				font-size: nth($fz,2);
+				font-weight: normal;
+				color: #888;
+				padding-left: 10px;
+			}
+		}		
+		.zol-digbox{		
+			display: flex;
+			justify-content: space-around;
+			.zol-digbox-lt{
+				width: 594px;
+				position:relative;
+				box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+				-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;				
+				.digbox-top{
+					h4{
+						font-size: nth($fz,4);
+						color: #fff;
+						height: 48px;
+						line-height: 48px;
+						padding-left: 12px;
+						background-color: #3CCBBC;
+						box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+						-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	
+						a{
+							font-size: nth($fz,2);
+							font-weight: normal;
+							float: right;
+							padding-right: 24px;
+							color: #fff;
+							span{
+								display: inline-block;
+								width: 17px;
+								height: 17px;
+								line-height: 15px;
+								text-align: center;
+								margin-left: 5px;
+								border:1px solid #fff;
+								border-radius:50%;
+							}
+						}
+					}
+				}
+				.digbox-goods{
+					padding-top: 20px;
+					li{
+						width: 185px;
+						float: left;
+						margin-left: 12px;
+						.digbox-title{
+							display: block;
+							width: 170px;
+							padding-top: 16px;
+							font-size: nth($fz,2);
+							color: #333;
+							overflow: hidden;
+    						text-overflow: ellipsis;
+    						white-space: nowrap;
+						}
+						.digbox-title:hover{
+							color: #f33;
+							text-decoration: underline;
+						}
+						a{
+							img{
+								width: 160px;
+								height: 160px;
+							}							
+						}
+						p{
+							font-size: nth($fz,2);
+							font-weight: bold;
+							color: #f33;
+							padding: 8px 0px;	
+						}
+					}				
+				}
+				.digbox-unico{
+					ul{
+						display: flex;
+						justify-content: space-around;
+						width: 594px;
+						border-top: 1px solid #e6e6e6;
+						padding: 10px 0;
+						li{
+							float: left;
+							position:relative;
+							span{
+								position: absolute;
+							    right: -10px;
+							    top: 50%;
+							    width: 1px;
+							    height: 20px;
+							    margin-top: -10px;
+							    background-color: #e6e6e6;							 							
+							}
+						}						
+					}
+
+				}
+			}	
+			.zol-digbox-rt{
+				width: 594px;
+				margin-left: 10px;
+				position:relative;
+				box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+				-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;				
+				.digbox-top{
+					h4{
+						font-size: nth($fz,4);
+						color: #fff;
+						height: 48px;
+						line-height: 48px;
+						padding-left: 12px;
+						background-color: #EB9E74;
+						box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+						-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	
+						a{
+							font-size: nth($fz,2);
+							font-weight: normal;
+							float: right;
+							padding-right: 24px;
+							color: #fff;
+							span{
+								display: inline-block;
+								width: 17px;
+								height: 17px;
+								line-height: 15px;
+								text-align: center;
+								margin-left: 5px;
+								border:1px solid #fff;
+								border-radius:50%;
+							}
+						}
+					}
+				}
+				.digbox-rtgoods{
+					padding-top: 20px;
+					li{
+						width: 185px;
+						float: left;
+						margin-left: 12px;
+						.digbox-title{
+							display: block;
+							width: 170px;
+							padding-top: 16px;
+							font-size: nth($fz,2);
+							color: #333;
+							overflow: hidden;
+    						text-overflow: ellipsis;
+    						white-space: nowrap;
+						}
+						.digbox-title:hover{
+							color: #f33;
+							text-decoration: underline;
+						}
+						a{
+							img{
+								width: 160px;
+								height: 160px;
+							}							
+						}
+						p{
+							font-size: nth($fz,2);
+							font-weight: bold;
+							color: #f33;
+							padding: 8px 0px;	
+						}
+					}				
+				}	
+				.digbox-unico{
+					ul{
+						display: flex;
+						justify-content: space-around;
+						width: 594px;
+						border-top: 1px solid #e6e6e6;
+					    padding: 10px 0;	
+						li{
+							float: left;
+							position:relative;
+							span{
+								position: absolute;
+							    right: -10px;
+							    top: 50%;
+							    width: 1px;
+							    height: 20px;
+							    margin-top: -10px;
+							    background-color: #e6e6e6;							 							
+							}
+						}						
+					}
+				}							
+			}						
+		}
+	}	
+/* 分割线 */
+.split-line{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	padding: 10px 0;
+	text-align: center;
+	background: url(../img/index/shop/digital-3c_hd.png) repeat-x  0 40px #f7f7f7;
+	span{
+		font-size: nth($fz,6);
+		color: #333;
+		background-color: #f7f7f7
+	}
+}
+/* 超市弹性盒 */
+.zol-shopbox{
+	background: #f7f7f7;
+	ul{
+		display: flex;
+		justify-content:space-between;
+	    flex-flow: row wrap;
+	}
+	li{
+		width: 215px;
+	    padding: 14px 0 0 10px;
+		margin-top: 12px;
+		background: #fff;
+		box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;
+		-webkit-box-shadow: 1px 1px 4px #ccc, -1px 1px 10px #ccc;	
+
+		.shopbox-title{
+			display: block;
+			width: 170px;
+			padding-top: 16px;
+			font-size: nth($fz,2);
+			color: #333;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.shopbox-title:hover{
+			color: #f33;
+			text-decoration: underline;
+		}
+		a{
+			img{
+				width: 200px;
+				height: 200px;
+			}						
+		}
+		p{
+			font-size: nth($fz,2);
+			font-weight: bold;
+			color: #f33;
+			padding: 8px 0px;	
+		}
+	}	
+}
+/* 页脚部分 */
+footer{
+	margin-top: 40px;
+	border-top: 1px solid #D9D9D9;
+	.foot-page{
+		width:$mainWd;
+		margin:$mgAuto;
+		height: 200px;
+		ul{
+		    padding: 30px 0;
+   			overflow: hidden;
+   			border-bottom: 1px solid #e6e6e6;
+		}
+		li{
+			float: left;
+		    padding-left: 52px;
+		    margin: 0 16px;
+		    line-height: 26px;	
+		    a{
+		    	display: block;
+		        padding-left: 5px;
+		        p:nth-child(1){
+		        	font-size: nth($fz,3);
+		        	color: #333;
+		        }	
+		        p:nth-child(2){
+		        	font-size: nth($fz,2);
+		        	color: #666;
+		        }
+		    }		
+		}
+	}
+}
+
+
+
+
+
+
+
+

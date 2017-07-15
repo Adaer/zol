@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/* CSS Document */
+/* 注册页面样式 */
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.zol-upinfo {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.zol-upinfo .zol-logo {
+  float: left;
+}
+
+.zol-upinfo .zol-logo .logo {
+  float: left;
+  display: block;
+  padding-top: 20px;
+}
+
+.zol-upinfo .zol-logo a:nth-of-type(2) {
+  display: block;
+  float: left;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 12px;
+  margin-left: 10px;
+  margin-top: 25px;
+  border-left: 1px solid #E6E6E6;
+}
+
+.zol-upinfo .zol-regtips {
+  float: right;
+  font-size: 14px;
+}
+
+.zol-upinfo .zol-regtips a {
+  padding: 2px 5px;
+  color: #CC0000;
+}
+
+.zol-upinfo .zol-regtips a:hover {
+  color: #fff;
+  background-color: #CC0000;
+}
+
+section {
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+section .tb-top {
+  height: 60px;
+  line-height: 60px;
+  background-color: #FAFAFA;
+}
+
+section .tb-top h1 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #888;
+  padding-left: 80px;
+}
+
+section .reg-info {
+  width: 560px;
+  height: 540px;
+  padding: 25px 0 100px 80px;
+  float: left;
+}
+
+section .reg-info .reg-head {
+  width: 470px;
+  height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 30px;
+}
+
+section .reg-info .reg-head span {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #CE1A1B;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-top: 2px solid #CE1A1B;
+  background: url(../img/reg/login-bg.png) no-repeat -132px -234px #fff;
+}
+
+section .reg-info input {
+  box-sizing: border-box;
+  width: 290px;
+  height: 40px;
+  padding-left: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #e6e6e6;
+  float: none;
+}
+
+section .reg-info .tb-phone, section .reg-info .tb-authCode, section .reg-info .tb-msgCode, section .reg-info .tb-pwd, section .reg-info .tb-pwds, section .reg-info .send-btn {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+section .reg-info .tb-form label {
+  font-size: 14px;
+}
+
+section .reg-info .tb-form em {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+  color: #FF3333;
+}
+
+section .reg-info .tb-form i {
+  font-size: 12px;
+  color: #AAAAAA;
+  position: absolute;
+  bottom: 14px;
+  left: 96px;
+}
+
+section .reg-info .tb-form .reg-tips {
+  visibility: hidden;
+  width: 115px;
+  color: #f33;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  padding-left: 20px;
+  background: url(../img/reg/login-bg.png) no-repeat -153px -194px;
+}
+
+section .reg-info .tb-form .vfreg {
+  position: absolute;
+  top: 0;
+  right: 145px;
+  font-size: 26px;
+}
+
+section .reg-info .tb-authCode input {
+  width: 170px;
+}
+
+section .reg-info .tb-authCode #v_container {
+  position: absolute;
+  top: 0;
+  left: 266px;
+}
+
+section .reg-info .tb-msgCode input {
+  width: 170px;
+}
+
+section .reg-info .tb-msgCode .msgBtn {
+  width: 110px;
+  color: #666666;
+  background-color: #F8F8F8;
+}
+
+section .reg-info .send-btn .tb-sign {
+  position: absolute;
+  top: -10px;
+  height: 40px;
+  line-height: 40px;
+}
+
+section .reg-info .send-btn .tb-sign .chkbox {
+  width: 15px;
+  float: left;
+  margin-right: 4px;
+  position: initial;
+}
+
+section .reg-info .send-btn .tb-sign a {
+  color: #134BA0;
+}
+
+section .reg-info .send-btn .tb-sign a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+section .reg-info .send-btn input {
+  color: #fff;
+  font-weight: bold;
+  background-color: #DB2E2E;
+  border-radius: 4px;
+  margin-left: 92px;
+  position: absolute;
+  top: 40px;
+  cursor: pointer;
+}
+
+section .reg-team {
+  width: 170px;
+  margin-top: 25px;
+  margin-right: 120px;
+  padding-left: 30px;
+  border-left: 1px solid #e6e6e6;
+  float: right;
+}
+
+section .reg-team .team-top {
+  padding-bottom: 12px;
+}
+
+section .reg-team .team-top a {
+  color: #134BA0;
+}
+
+section .reg-team .team-top a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+section .reg-team .team-ico {
+  width: 170px;
+}
+
+section .reg-team .team-ico a {
+  display: block;
+  width: 170px;
+  height: 38px;
+  background: url(../img/reg/login-bg.png) no-repeat;
+  margin-bottom: 10px;
+}
+
+section .reg-team .team-ico a:nth-of-type(1) {
+  background: url(../img/reg/weixin.png) no-repeat;
+}
+
+section .reg-team .team-ico a:nth-of-type(2) {
+  background-position: 0 3px;
+}
+
+section .reg-team .team-ico a:nth-of-type(3) {
+  background-position: 0 -36px;
+}
+
+section .reg-team .team-ico a:nth-of-type(4) {
+  background-position: 0 -73px;
+}
+
+section .reg-team .team-ico a:nth-of-type(5) {
+  background-position: 0 -110px;
+}
+
+section .reg-team .team-ico a:hover {
+  opacity: 0.7;
+}
+
+/* 页脚信息 */
+footer {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 50px 0 0;
+  border-top: 1px solid #dcdcdc;
+}
+
+footer p {
+  width: 990px;
+  margin: 0 auto;
+}
+
+footer p a {
+  padding: 0 6px;
+}
+
+footer p a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+footer p span {
+  color: #666;
+  float: right;
+}

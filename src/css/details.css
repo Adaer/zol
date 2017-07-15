@@ -1,0 +1,1040 @@
+@charset "UTF-8";
+/* 
+	列表scss to css
+ */
+/* 吸顶条top */
+.zol-topbar {
+  height: 29px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  z-index: 998;
+}
+
+.zol-topbar .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.zol-topbar .wrapper .zol-login-info {
+  float: left;
+  line-height: 29px;
+}
+
+.zol-topbar .wrapper .zol-login-info .zol-backhome {
+  padding-right: 20px;
+}
+
+.zol-topbar .wrapper .zol-login-info .zol-login {
+  padding-right: 20px;
+}
+
+.zol-topbar .wrapper .zol-login-info .zol-login a {
+  color: #f60;
+}
+
+.zol-topbar .wrapper .zol-login-info .zol-register a {
+  color: #f60;
+}
+
+.zol-topbar .wrapper .zol-topmenu {
+  margin-right: 15px;
+  float: right;
+}
+
+.zol-topbar .wrapper .zol-topmenu li {
+  color: #888;
+  float: left;
+  line-height: 29px;
+  padding: 0 12px;
+}
+
+.zol-topbar .wrapper .zol-topmenu li a:hover {
+  color: #c00;
+  text-decoration: underline;
+}
+
+.zol-topbar .wrapper .zol-topmenu li .zol-topmenu-nohover:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.zol-topbar .wrapper .zol-topmenu li .zol-topmenu-ico {
+  position: absolute;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/topbar_ico.png) no-repeat 4px -40px;
+}
+
+.zol-topbar .wrapper .zol-topmenu li .zol-topmenu-phone {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  background: url(../img/topbar_ico.png) no-repeat -10px 0;
+}
+
+.zol-topbar .wrapper .zol-topmenu li:hover .zol-topmenu-ico {
+  transition: 0.3s linear;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.zol-changetel {
+  width: 1200px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.zol-changetel a:hover {
+  color: #f60;
+}
+
+/* ----------顶部信息---用户导航↑↑↑↑↑-------------------------- */
+/* ----------顶部logo---搜索↓↓↓↓-------------------------- */
+.zol-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  /*---搜索框---*/
+}
+
+.zol-head .zol-hdlogo a:nth-child(1) {
+  float: left;
+  display: block;
+  padding-right: 10px;
+  border-right: 1px solid #eee;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) {
+  float: right;
+  padding-left: 10px;
+  position: relative;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) h2 {
+  position: relative;
+  z-index: 1002;
+  width: 68px;
+  font-weight: normal;
+  color: #333;
+  padding-left: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) h2 em {
+  position: absolute;
+  left: 52px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/city-icon.png) no-repeat 4px 10px;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) #zol-citymap {
+  width: 140px;
+  min-height: 60px;
+  position: absolute;
+  z-index: 1001;
+  top: 27px;
+  background: #fff;
+  display: none;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) #zol-citymap li {
+  margin: 4px 5px;
+  height: 16px;
+  line-height: 16px;
+  float: left;
+}
+
+.zol-head .zol-hdlogo div:nth-child(2) #zol-citymap li a {
+  display: block;
+  width: 24px;
+  padding: 6px 6px;
+  border-right: none;
+}
+
+.zol-head .zol-search {
+  /*---搜索热词---*/
+}
+
+.zol-head .zol-search .zol-sch-box {
+  overflow: hidden;
+}
+
+.zol-head .zol-search .zol-sch-box :nth-child(1) {
+  width: 427px;
+  height: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #CCCCCC;
+  border: 2px solid #C40000;
+}
+
+.zol-head .zol-search .zol-sch-box :nth-child(2) {
+  width: 80px;
+  height: 34px;
+  font-size: 16px;
+  background: #C40000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.zol-head .zol-search .zol-hotkey::before {
+  content: '';
+  clear: both;
+  overflow: hidden;
+  height: 0;
+}
+
+.zol-head .zol-search .zol-hotkey {
+  padding-top: 10px;
+}
+
+.zol-head .zol-search .zol-hotkey a {
+  color: #999;
+  margin: 0 5px;
+}
+
+.zol-head .zol-search .zol-hotkey a:hover {
+  color: #c60;
+  text-decoration: underline;
+}
+
+/*---大导航类---*/
+.zol-nav-wrapper {
+  width: 1200px;
+  height: 40px;
+  margin: 0 auto;
+  border-bottom: 2px solid #B1191A;
+  position: relative;
+  z-index: 1000;
+}
+
+.zol-nav-wrapper .zol-goods-box, .zol-nav-wrapper .zol-nav-main, .zol-nav-wrapper .zol-nav-adv {
+  position: absolute;
+}
+
+.zol-nav-wrapper .zol-nav-class {
+  display: none;
+}
+
+.zol-nav-wrapper .zol-goods-box {
+  width: 200px;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box h2 {
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  background: #CE1A1B;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav {
+  border-left: 1px solid #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li {
+  height: 64px;
+  padding-left: 36px;
+  border-bottom: 1px solid #BD3B3C;
+  position: relative;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div {
+  font-size: 14px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div:nth-of-type(1) {
+  height: 30px;
+  line-height: 30px;
+  background: url(../img/nav/item.png) no-repeat 144px 11px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div:nth-of-type(1) span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/nav/classify-icon.png) no-repeat;
+  position: absolute;
+  left: 12px;
+  top: 7px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div:nth-of-type(2) {
+  padding-top: 4px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div:nth-of-type(2) a {
+  font-size: 12px;
+  color: #fff;
+  padding-right: 5px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li div:nth-of-type(2) a:hover {
+  transition: 0.2s linear;
+  color: #B1191A;
+  text-decoration: underline;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(2) div:nth-of-type(1) span {
+  background-position: 0 -16px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(3) div:nth-of-type(1) span {
+  background-position: 0 -32px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(4) div:nth-of-type(1) span {
+  background-position: 0 -51px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(5) div:nth-of-type(1) span {
+  background-position: 0 -67px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(6) div:nth-of-type(1) span {
+  background-position: 0 -85px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:hover {
+  background-color: #fff;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:hover div:nth-of-type(1) {
+  color: #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:hover div:nth-of-type(2) a {
+  transition: 0.2s linear;
+  color: #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:last-child {
+  background-color: #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox {
+  width: 1000px;
+  background: #fff;
+  box-sizing: border-box;
+  border-right: 1px solid #C50505;
+  border-bottom: 1px solid #C50505;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  display: none;
+  z-index: 101;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content {
+  background: #fff;
+  width: 720px;
+  min-height: 442px;
+  padding-left: 30px;
+  padding-top: 12px;
+  position: relative;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dt, .zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd {
+  float: left;
+  line-height: 24px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dt {
+  font-weight: bold;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd {
+  padding-left: 46px;
+  background: url(../img/nav/service.png) no-repeat 20px 0;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd a:hover {
+  text-decoration: underline;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd:nth-of-type(2) {
+  background-position: 20px -24px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd:nth-of-type(3) {
+  background-position: 20px -47px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd:nth-of-type(4) {
+  background-position: 20px -71px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd:nth-of-type(5) {
+  background-position: 20px -95px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico dd:nth-of-type(6) {
+  background-position: 20px -119px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-ico a {
+  font-size: 14px;
+  color: #00AE75;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass {
+  line-height: 24px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass dt {
+  float: left;
+  min-width: 60px;
+  font-weight: bold;
+  color: #333;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  background: url(../img/nav/type-arrow.png) no-repeat 76px 8px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass dt a:hover {
+  transition: 0.2s linear;
+  color: #B1191A;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass dd {
+  margin: 10px 0 10px 90px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass dd a {
+  padding: 0 10px;
+  border-right: 1px solid #eee;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-subclass dd a:hover {
+  transition: 0.2s linear;
+  color: #B1191A;
+  text-decoration: underline;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-logo {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-logo li {
+  box-sizing: border-box;
+  width: 118px;
+  height: 60px;
+  padding-left: 0;
+  border-bottom: 0 none;
+  margin: 1px;
+  float: left;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-logo li a {
+  width: 118px;
+  height: 60px;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav .nav-menu-conbox .nav-menu-content .nav-menu-logo a:hover {
+  transition: 0.3s linear;
+  border: 1px solid #eee;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(2) .nav-menu-conbox {
+  top: -65px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(3) .nav-menu-conbox {
+  top: -130px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(4) .nav-menu-conbox {
+  top: -195px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(5) .nav-menu-conbox {
+  top: -260px;
+}
+
+.zol-nav-wrapper .zol-goods-box .zol-nav li:nth-of-type(6) .nav-menu-conbox {
+  top: -325px;
+}
+
+.zol-nav-wrapper .zol-nav-main {
+  left: 208px;
+}
+
+.zol-nav-wrapper .zol-nav-main li {
+  float: left;
+}
+
+.zol-nav-wrapper .zol-nav-main li a {
+  font-size: 16px;
+  line-height: 42px;
+  color: #333;
+  padding: 0 15px;
+}
+
+.zol-nav-wrapper .zol-nav-main li a:hover {
+  transition: 0.2s linear;
+  color: #FF5353;
+}
+
+.zol-nav-wrapper .zol-nav-adv {
+  line-height: 42px;
+  right: 0;
+}
+
+.zol-nav-wrapper .zol-nav-adv a {
+  font-size: 16px;
+  color: #FF5353;
+}
+
+.zol-nav-wrapper .zol-nav-adv a:hover {
+  transition: 0.3s linear;
+  color: #C40000;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(1):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -18px 0;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(2):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -17px -16px;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(3):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -17px -32px;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(4):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -18px -51px;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(5):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -18px -67px;
+}
+
+.zol-nav-wrapper .zol-nav li:nth-of-type(6):hover div:nth-of-type(1) span {
+  background: url(../img/nav/classify-icon.png) no-repeat -17px -85px;
+}
+
+aside {
+  position: fixed;
+  right: -8px;
+  top: 0;
+  height: 100%;
+  width: 46px;
+  background: #333;
+  z-index: 2000;
+  /* 登录遮罩层！！！ */
+}
+
+aside .zol-toolbar {
+  height: 100%;
+  width: 46px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+aside .zol-toolbar .toolbar-top {
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+aside .zol-toolbar .toolbar-top div {
+  margin: 10px 0;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-myindent {
+  width: 46px;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -6px;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-myindent span {
+  display: block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #f33;
+  position: absolute;
+  z-index: -110;
+  left: 0;
+  display: none;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-myindent:hover {
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -6px #f33;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-footprint {
+  width: 46px;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -82px;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-footprint span {
+  display: block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #f33;
+  position: absolute;
+  z-index: -110;
+  left: 0;
+  display: none;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-footprint:hover {
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -82px #f33;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-cart {
+  width: 46px;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -115px;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-cart span {
+  display: block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #f33;
+  position: absolute;
+  z-index: -110;
+  left: 0;
+  display: none;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-cart i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #f33;
+  position: absolute;
+  top: 84px;
+  right: 14px;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-cart:hover {
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -115px #f33;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-coupon {
+  width: 46px;
+  height: 30px;
+  cursor: pointer;
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -695px;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-coupon span {
+  display: block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #f33;
+  position: absolute;
+  z-index: -110;
+  left: 0;
+  display: none;
+}
+
+aside .zol-toolbar .toolbar-top .toolbar-coupon:hover {
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -695px #f33;
+}
+
+aside .zol-toolbar .toolbar-under {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+}
+
+aside .zol-toolbar .toolbar-under .toolbar-advice a {
+  display: block;
+  width: 34px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+aside .zol-toolbar .toolbar-under .toolbar-backtop {
+  width: 46px;
+  height: 40px;
+  cursor: pointer;
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -183px;
+}
+
+aside .zol-toolbar .toolbar-under .toolbar-backtop a {
+  display: block;
+  height: 40px;
+}
+
+aside .zol-toolbar .toolbar-under .toolbar-backtop:hover {
+  background: url(../img/index/aside_right/bar_ico.png) no-repeat 0 -183px #f33;
+}
+
+aside #layer_show {
+  display: none;
+}
+
+aside .zol-layerbox {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+aside .toolbar-login {
+  width: 320px;
+  height: 360px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+aside .toolbar-login input {
+  float: none;
+  border: 1px solid #e6e6e6;
+  width: 290px;
+  height: 36px;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+aside .toolbar-login .tool-login-top {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 16px;
+  background-color: #FAFAFA;
+}
+
+aside .toolbar-login .tool-login-top h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+}
+
+aside .toolbar-login .tool-login-top h4 .close-layer {
+  float: right;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 15px;
+  margin: 9px 5px;
+  text-align: center;
+  cursor: pointer;
+  background: url(../img/reg/bg.png) no-repeat -181px -81px;
+}
+
+aside .toolbar-login .tool-login-top h4 .close-layer:hover {
+  background-position: -156px -81px;
+}
+
+aside .toolbar-login .tool-login-inf {
+  text-align: center;
+}
+
+aside .toolbar-login .tool-login-inf .tool-infhd {
+  font-size: 14px;
+  text-align: left;
+  padding-left: 14px;
+  padding-top: 10px;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(3) {
+  text-align: left;
+  padding-left: 14px;
+  line-height: 33px;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(3) input {
+  width: 13px;
+  height: 13px;
+  margin-right: 4px;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(3) a {
+  float: right;
+  padding-right: 14px;
+  color: blue;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(3) a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(4) input {
+  font-size: 16px;
+  color: #fff;
+  background-color: #DC2F2F;
+  border-radius: 6px;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(4) input:hover {
+  background-color: #f33;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(5) {
+  text-align: right;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(5) a {
+  padding-right: 14px;
+  color: blue;
+}
+
+aside .toolbar-login .tool-login-inf form p:nth-of-type(5) a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team {
+  height: 60px;
+  padding-top: 10px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team span {
+  float: left;
+  padding-top: 5px;
+  padding-left: 12px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a {
+  display: inline-block;
+  width: 38px;
+  height: 40px;
+  margin: 0 5px;
+  background: url(../img/reg/bg.png) no-repeat 0 -81px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(1):hover {
+  background-position: 0 -121px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(2) {
+  background-position: -40px -81px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(2):hover {
+  background-position: -39px -121px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(3) {
+  background-position: -79px -81px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(3):hover {
+  background-position: -78px -121px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(4) {
+  background-position: -117px -81px;
+}
+
+aside .toolbar-login .tool-login-inf .tool-login-team a:nth-of-type(4):hover {
+  background-position: -117px -121px;
+}
+
+/* 列表页 */
+section {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*  详情页 content外层盒子*/
+.min-nav {
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.min-nav a {
+  padding: 0 6px;
+}
+
+.min-nav a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+.min-nav a:last-child:hover {
+  text-decoration: none;
+  color: #666;
+  cursor: normal;
+}
+
+.goods-wrapper {
+  border: 1px solid #e6e6e6;
+}
+
+.goods-wrapper .deta-lt {
+  float: left;
+}
+
+.goods-wrapper .deta-rt {
+  float: left;
+  width: 530px;
+  min-height: 400px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.goods-wrapper .deta-rt .map-info {
+  position: absolute;
+  top: 112px;
+  left: 90px;
+}
+
+.goods-wrapper .deta-rt .shop-info {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.goods-wrapper .deta-rt .shop-info h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  padding: 10px 4px;
+}
+
+.goods-wrapper .deta-rt .shop-info i {
+  display: inline-block;
+  color: #888;
+}
+
+.goods-wrapper .deta-rt .shop-info div {
+  line-height: 40px;
+}
+
+.goods-wrapper .deta-rt .shop-info div:nth-of-type(1) {
+  background: #fafafa;
+}
+
+.goods-wrapper .deta-rt .shop-info div:nth-of-type(1) span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #CC0000;
+}
+
+.goods-wrapper .deta-rt .shop-info div:nth-of-type(1) span::before {
+  content: "￥";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.goods-wrapper .deta-rt .shop-info #city_map p {
+  position: absolute;
+  top: 102px;
+  right: 50px;
+}
+
+.goods-wrapper .deta-rt .shop-info #city_map p span {
+  font-weight: bold;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-count a {
+  color: #333;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-count a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-count span {
+  color: #f33;
+  font-weight: bold;
+  padding: 0 5px;
+  border-right: 1px solid #e6e6e6;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-count :nth-child(3) span {
+  border: 0 none;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard {
+  min-height: 80px;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard :nth-child(1) {
+  float: left;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard :nth-child(2) {
+  float: left;
+  color: #333;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard :nth-child(2) a {
+  float: none;
+  color: blue;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard :nth-child(2) a:hover {
+  color: #f33;
+  text-decoration: underline;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard .serv-ico {
+  float: left;
+  padding-left: 56px;
+}
+
+.goods-wrapper .deta-rt .shop-info .shop-safeguard .serv-ico a {
+  color: #333;
+  display: inline-block;
+  padding-left: 32px;
+  margin: 0 10px;
+  background: url(../img/footer/service-bg.png) no-repeat;
+  background-size: 28px;
+  height: 28px;
+  line-height: 28px;
+  float: none;
+}
