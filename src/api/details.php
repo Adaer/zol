@@ -28,7 +28,7 @@
 	$shopdata = $result->fetch_all(MYSQLI_ASSOC);
 
 	//在商品数组中遍历出 id对应的商品
-	// $item是$shopdata数组中的所有元素
+	// $item是 $shopdata 数组中的所有元素
 	$resData;
 	foreach ($shopdata as  $item) {
 		if($item['id'] == $goodsId){

@@ -27,7 +27,7 @@ require(['jQuery','codeVerify'],function(){
 				$(this).removeClass('reg-input-sty');
 			})
 		});
-/*注册表单验证*/
+/*-----注册表单验证------------*/
 var pwd_Boolean = false;
 var pwds_Boolean = false;
 var mobile_Boolean = false;
@@ -38,7 +38,26 @@ $('#reg_phone').blur(function(){
   if ((/^1[34578]\d{9}$/).test($("#reg_phone").val())){
     $('.verify_phone').html("✔").css("color","green");
     $(this).siblings('.reg-tips').css({visibility:'hidden'});
-    mobile_Boolean = true;
+    mobile_Boolean = true;  
+   //请求查看数据库中是否存在用户
+   var that = $(this);
+    $.ajax({
+        url:'../api/userFindAPI.php',
+        data:{
+        reg_phone:$("#reg_phone").val(),  
+        },
+        dataType:'json',
+        success:function(res){
+           if(res == '1'){
+            console.log(res);
+            that.siblings('.reg-tips').html('手机号码已存在').css({visibility:'visible'});
+            $('.verify_phone').html("");
+           }
+           else if(res == '0'){
+            $('.verify_phone').html("✔").css("color","green");
+           }
+        }
+    })     
   }
   else if($("#reg_phone").val()>0){
   	$(this).siblings('.reg-tips').html('请填写正确手机号码').css({visibility:'visible'});
@@ -50,6 +69,7 @@ $('#reg_phone').blur(function(){
   	$('.verify_phone').html("");
     mobile_Boolean = false;
   }
+
 });
 	/*连接ID 生成验证码------*/
 	var verifyCode = new GVerify("v_container");
@@ -59,13 +79,16 @@ $('#reg_authCode').blur(function(){
     $('.verify_authCode').html("");
     authCode_Boolean = false;
   }	
+  //校验 验证码
   var $codeRes = verifyCode.validate($('#reg_authCode').val());
   if($codeRes){
   	$('.verify_authCode').html("✔").css("color","green");
   	$(this).siblings('.reg-tips').css({visibility:'hidden'});
+    authCode_Boolean = true;
   }else{
   	$(this).siblings('.reg-tips').html('验证码错误').css({visibility:'visible'});
   	$('.verify_authCode').html("");
+    authCode_Boolean = false;
   }
 })
 // password
@@ -100,14 +123,44 @@ $('#reg_pwds').blur(function(){
 
 
 
-// click
-$('#reg_btn').click(function(){
+// click点击时检查表单是否正确，并发送js请求检查手机号是否存在
+//协议书勾选状态 才能正常注册
+$('.chkbox').change(function(){
+  $(this).prop("checked",$(this).prop("checked"));
+  if($(this).prop("checked")){
+    $('#reg_btn').prop("disabled",false).css({backgroundColor:'#DB2E2E'})
+  }else{
+    $('#reg_btn').prop("disabled",true).css({backgroundColor:'#888'})
+  }
+
+});
+//点击注册按钮 事件
+ // 先禁用提交按钮
+$('#reg_btn').prop("disabled",true).click(function(){
+
+      
   if(pwd_Boolean && pwds_Boolean&& mobile_Boolean&& authCode_Boolean == true){
-    alert("注册成功");
-  }else {
+    $.ajax({
+        url:'../api/userWriteAPI.php',
+        data:{
+        reg_phone:$("#reg_phone").val(),  
+        reg_pwd:$("#reg_pwd").val() 
+        },
+        dataType:'json',
+        success:function(res){
+
+        }
+    }) 
+
+    //由于有form标签 这里无法跳转
+    //window.location.href = "http://localhost/zolserver";
+    $('.tb-form').attr({action:"./uscenter.html"});
+  }
+  else{
     alert("请完善信息");
     return false;
   }
+
 });
 
 
