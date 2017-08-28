@@ -53,7 +53,8 @@ $('#reg_phone').blur(function(){
             that.siblings('.reg-tips').html('手机号码已存在').css({visibility:'visible'});
             $('.verify_phone').html("");
            }
-           else if(res == '0'){
+           if(res == '0'){
+            console.log(res);
             $('.verify_phone').html("✔").css("color","green");
            }
         }
@@ -126,20 +127,20 @@ $('#reg_pwds').blur(function(){
 // click点击时检查表单是否正确，并发送js请求检查手机号是否存在
 //协议书勾选状态 才能正常注册
 $('.chkbox').change(function(){
+    //给复选框添加 选中 checked状态
   $(this).prop("checked",$(this).prop("checked"));
   if($(this).prop("checked")){
     $('#reg_btn').prop("disabled",false).css({backgroundColor:'#DB2E2E'})
   }else{
     $('#reg_btn').prop("disabled",true).css({backgroundColor:'#888'})
   }
-
 });
 //点击注册按钮 事件
  // 先禁用提交按钮
 $('#reg_btn').prop("disabled",true).click(function(){
-
-      
+     
   if(pwd_Boolean && pwds_Boolean&& mobile_Boolean&& authCode_Boolean == true){
+    //发起请求 注册
     $.ajax({
         url:'../api/userWriteAPI.php',
         data:{
@@ -148,7 +149,7 @@ $('#reg_btn').prop("disabled",true).click(function(){
         },
         dataType:'json',
         success:function(res){
-
+            console.log(res);
         }
     }) 
 

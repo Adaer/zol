@@ -39,7 +39,7 @@
 	//判断前端出来的值是否在数据库中存在
 	if($len>0){
 		
-		echo "1";
+		echo "true";
 		die();
 	}
 	else{
@@ -47,7 +47,7 @@
 		$wirteSQL = "insert into reguser(tel,password) values('$tel','$password')";
 		$result2 = $connect->query($wirteSQL);
 		if($result2){
-			echo "0";
+			echo "false";
 		}
 	}
 

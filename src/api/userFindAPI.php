@@ -22,10 +22,9 @@
 	// 编码格式
 	$connect->set_charset('utf8');
 	//接收前端数据 用于用户数据查询 密码修改	
+	//接收到的是 参数：变量 get参数 不是get变量
 	$tel = isset($_GET['reg_phone']) ? $_GET['reg_phone'] : '';
-	$password = isset($_GET['reg_pwd']) ? $_GET['reg_pwd'] : '';
-	//md5加密
-	$password = md5($password);
+	
 
 	//查询数据库
 	$sql = "select * from reguser ";

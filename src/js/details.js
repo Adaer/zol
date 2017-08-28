@@ -234,8 +234,7 @@ require(['jQuery','jQZoom'],function(){
 		$('.shop-info').html($shopContent);
 		
 		//放大镜插件
-		$(function() {
-			
+		$(function() {			
 			var magnifierConfig = {
 				magnifier : "#magnifier1",//最外层的大容器
 				width : 360,//承载容器宽
